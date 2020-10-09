@@ -19,7 +19,7 @@ $.ajaxPrefilter(function (params) {
     }
     //拦截所有响应，判断身份信息
     params.complete = function (res) {
-        console.log(res);
+        // console.log(res);
         //判断：如果是身份认证失败，跳转回登录页面
         if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
             //删除本地token
